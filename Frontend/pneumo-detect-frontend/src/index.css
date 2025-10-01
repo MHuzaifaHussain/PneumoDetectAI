@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a091e;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 15px 15px;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.pulsing-node {
+    animation: pulse 3s infinite ease-in-out;
+}
