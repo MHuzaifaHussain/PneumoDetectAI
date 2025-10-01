@@ -2,13 +2,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import LandingPage from "./pages/LandingPage";
 import GuestPage from "./pages/GuestPage";
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import DashboardPage from './pages/DashboardPage';
-import NotFoundPage from './pages/NotFoundPage';
-import ProtectedRoute from './components/ProtectedRoute';
-import VerifyEmailPage from './pages/VerifyEmailPage';
-import "./App.css";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import DashboardPage from "./pages/DashboardPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import VerifyEmailPage from "./pages/VerifyEmailPage";
 
 function App() {
   return (
@@ -24,27 +23,27 @@ function App() {
           },
         }}
       />
-        <Routes>
-          {/* Public Routes */}
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/guest-predict" element={<GuestPage />} />
-          <Route path="/verify-email" element={<VerifyEmailPage />} />
-          
-          {/* Protected Route */}
-          <Route 
-            path="/dashboard" 
-            element={
-              <ProtectedRoute>
-                <DashboardPage />
-              </ProtectedRoute>
-            } 
-          />
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/guest-predict" element={<GuestPage />} />
+        <Route path="/verify-email" element={<VerifyEmailPage />} />
 
-          {/* Catch-all 404 Route */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        {/* Protected Route */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Catch-all 404 Route */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </Router>
   );
 }
