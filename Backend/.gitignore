@@ -1,5 +1,5 @@
 # Virtual Environment
-venv48/
+venv/
 env/
 *.venv
 
@@ -14,4 +14,4 @@ __pycache__/
 .pytest_cache/
 
 # Model File
-.keras
+*.keras
